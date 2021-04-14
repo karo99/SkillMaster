@@ -8,21 +8,25 @@ import { SidebarComponent } from './shared/components/sidebar/sidebar.component'
 import { BoardComponent } from './components/board/board.component';
 import { SkillCardComponent } from './shared/components/skill-card/skill-card.component';
 import { FlexLayoutModule } from '@angular/flex-layout';
+import { AddCardDialogComponent } from './components/add-card-dialog/add-card-dialog.component';
+import {FormsModule} from '@angular/forms';
 
 @NgModule({
   declarations: [
     AppComponent,
     SidebarComponent,
     BoardComponent,
-    SkillCardComponent
+    SkillCardComponent,
+    AddCardDialogComponent
   ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule,
-    BrowserAnimationsModule,
-    MaterialModule,
-    FlexLayoutModule
-  ],
+    imports: [
+        BrowserModule,
+        AppRoutingModule,
+        BrowserAnimationsModule,
+        MaterialModule,
+        FlexLayoutModule,
+        FormsModule
+    ],
   providers: [],
   bootstrap: [AppComponent]
 })

@@ -5,7 +5,9 @@ import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatSelectModule } from '@angular/material/select';
 import { MatCardModule } from '@angular/material/card';
-import {MatInputModule} from '@angular/material/input';
+import { MatInputModule } from '@angular/material/input';
+import { MatDialogModule } from '@angular/material/dialog';
+import {MatIconModule} from '@angular/material/icon';
 
 @NgModule({
   declarations: [],
@@ -16,7 +18,9 @@ import {MatInputModule} from '@angular/material/input';
     MatFormFieldModule,
     MatSelectModule,
     MatCardModule,
-    MatInputModule
+    MatInputModule,
+    MatDialogModule,
+    MatIconModule
   ],
   exports: [
     MatButtonModule,
@@ -24,7 +28,9 @@ import {MatInputModule} from '@angular/material/input';
     MatFormFieldModule,
     MatSelectModule,
     MatCardModule,
-    MatInputModule
+    MatInputModule,
+    MatDialogModule,
+    MatIconModule
   ]
 })
 export class MaterialModule { }
