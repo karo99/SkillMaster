@@ -10,6 +10,7 @@ import { SkillCardComponent } from './shared/components/skill-card/skill-card.co
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { AddCardDialogComponent } from './components/add-card-dialog/add-card-dialog.component';
 import {FormsModule} from '@angular/forms';
+import { AddBoardDialogComponent } from './components/add-board-dialog/add-board-dialog.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import {FormsModule} from '@angular/forms';
     SidebarComponent,
     BoardComponent,
     SkillCardComponent,
-    AddCardDialogComponent
+    AddCardDialogComponent,
+    AddBoardDialogComponent
   ],
     imports: [
         BrowserModule,

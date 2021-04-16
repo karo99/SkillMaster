@@ -13,9 +13,15 @@ export class BoardComponent implements OnInit {
 
   constructor(private dialog: MatDialog) {
     this.cardArray = [
-      // new SkillCardModel('first'),
-      // new SkillCardModel('second'),
-      // new SkillCardModel('third')
+      new SkillCardModel('first'),
+      new SkillCardModel('second'),
+      new SkillCardModel('third'), new SkillCardModel('first'),
+      new SkillCardModel('second'),
+      new SkillCardModel('third'), new SkillCardModel('first'),
+      new SkillCardModel('second'),
+      new SkillCardModel('third'), new SkillCardModel('first'),
+      new SkillCardModel('second'),
+      new SkillCardModel('third'),
     ];
   }
 

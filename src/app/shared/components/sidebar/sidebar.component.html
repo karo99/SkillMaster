@@ -1,1 +1,8 @@
-<p>sidebar works!</p>
+<div class="sidebar-container" fxLayout="column" fxLayoutAlign="start center">
+  <!--  <p *ngFor="let board of boardArray">{{board.label}}</p>-->
+  <div *ngFor="let board of boardArray" [ngClass]="{'active-board' : board === activeBoard}"
+       class="board-title-wrapper" fxLayoutAlign="center center" (click)="chooseBoard(board)" style="cursor: pointer">
+    <p>{{board.label}}</p>
+  </div>
+  <button mat-raised-button (click)="addBoard()">Add new board</button>
+</div>
