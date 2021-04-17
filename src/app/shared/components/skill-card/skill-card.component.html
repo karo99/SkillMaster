@@ -1,3 +1,8 @@
-<mat-card class="card-container" fxLayoutAlign="center center">
-  {{title}}
+<mat-card class="card-container" fxLayout="column">
+  <div class="edit-container" fxFlex="20" fxLayoutAlign="flex-end center">
+    <mat-icon  fxLayoutAlign="center center" aria-hidden="false" aria-label="Example home icon">edit</mat-icon>
+  </div>
+  <div class="title-container" fxFlex="60" fxLayoutAlign="center center">
+    {{title}}
+  </div>
 </mat-card>

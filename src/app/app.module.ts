@@ -9,7 +9,7 @@ import { BoardComponent } from './components/board/board.component';
 import { SkillCardComponent } from './shared/components/skill-card/skill-card.component';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { AddCardDialogComponent } from './components/add-card-dialog/add-card-dialog.component';
-import {FormsModule} from '@angular/forms';
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import { AddBoardDialogComponent } from './components/add-board-dialog/add-board-dialog.component';
 
 @NgModule({
@@ -27,7 +27,8 @@ import { AddBoardDialogComponent } from './components/add-board-dialog/add-board
         BrowserAnimationsModule,
         MaterialModule,
         FlexLayoutModule,
-        FormsModule
+        FormsModule,
+        ReactiveFormsModule
     ],
   providers: [],
   bootstrap: [AppComponent]

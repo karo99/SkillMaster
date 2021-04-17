@@ -1,5 +1,6 @@
 <!--<button mat-raised-button (click)="addCard()">Dodaj</button>-->
 <div class="skill-cards-container" fxLayoutGap="30px" fxLayoutAlign="start start">
   <app-skill-card *ngFor="let card of cardArray" [title]="card.label"></app-skill-card>
-  <app-skill-card [title]="'+'" (click)="addCard()" style="cursor: pointer"></app-skill-card>
+<!--  <app-skill-card [title]="'+'" (click)="addCard()" style="cursor: pointer"></app-skill-card>-->
+  <button mat-raised-button (click)="addCard()">+</button>
 </div>

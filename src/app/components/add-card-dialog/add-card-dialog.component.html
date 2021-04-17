@@ -1,10 +1,13 @@
 <div class="dialog-container" fxLayout="column">
-  <mat-form-field>
-    <mat-label>Skill name</mat-label>
-    <input matInput type="text" [(ngModel)]="cardTitle">
-    <button mat-button *ngIf="cardTitle" matSuffix mat-icon-button aria-label="Clear" (click)="cardTitle=''">
-      <mat-icon>close</mat-icon>
-    </button>
-  </mat-form-field>
-  <button mat-raised-button (click)="saveTitle()">Save</button>
+  <form [formGroup]="cardForm" (ngSubmit)="saveTitle()" fxLayout="column">
+    <mat-form-field>
+      <mat-label>Skill name</mat-label>
+      <input matInput type="text" formControlName="cardTitle">
+      <button mat-button *ngIf="cardForm.get('cardTitle').value" matSuffix mat-icon-button aria-label="Clear"
+              (click)="cardForm.get('cardTitle').setValue('')">
+        <mat-icon>close</mat-icon>
+      </button>
+    </mat-form-field>
+    <button mat-raised-button type="submit">Save</button>
+  </form>
 </div>

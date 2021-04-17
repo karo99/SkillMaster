@@ -1,4 +1,5 @@
 import {Component, EventEmitter, OnInit, Output} from '@angular/core';
+import {FormControl, FormGroup, Validators} from '@angular/forms';
 
 @Component({
   selector: 'app-add-card-dialog',
@@ -6,18 +7,22 @@ import {Component, EventEmitter, OnInit, Output} from '@angular/core';
   styleUrls: ['./add-card-dialog.component.scss']
 })
 export class AddCardDialogComponent implements OnInit {
-  public cardTitle: string;
   @Output() sendTitle: EventEmitter<string>;
+  public cardForm: FormGroup;
 
   constructor() {
-    this.cardTitle = '';
     this.sendTitle = new EventEmitter<string>();
+    this.cardForm = new FormGroup({
+      cardTitle: new FormControl(null, [Validators.required])
+    });
   }
 
   ngOnInit(): void {
   }
 
   public saveTitle(): void {
-    this.sendTitle.emit(this.cardTitle);
+    if (this.cardForm.valid) {
+      this.sendTitle.emit(this.cardForm.get('cardTitle').value);
+    }
   }
 }
