@@ -1,4 +1,29 @@
 /* You can add global styles to this file, and also import other style files */
 
 html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+body { margin: 0; font-family: "Montserrat", sans-serif}
+
+@font-face {
+  font-family: "Montserrat";
+  src: local("Montserrat"), url("/assets/fonts/Montserrat-Regular.ttf");
+}
+
+@font-face {
+  font-family: "Montserrat-Bold";
+  src: local("Montserrat"), url("assets/fonts/Montserrat-Bold.ttf");
+}
+
+@font-face {
+  font-family: "Montserrat-SemiBold";
+  src: local("Montserrat"), url("assets/fonts/Montserrat-SemiBold.ttf");
+}
+
+@font-face {
+  font-family: "Austria";
+  src: local("Austria"), url("assets/fonts/AustriaMemoriesSerif-GOy2O.otf");
+}
+
+@import '~@angular/material/theming';
+$custom-typography: mat-typography-config(
+  $font-family: 'Montserrat'
+);

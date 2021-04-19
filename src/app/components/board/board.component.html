@@ -1,6 +1,17 @@
 <!--<button mat-raised-button (click)="addCard()">Dodaj</button>-->
+<div class="info-container" fxLayout="row">
+  <p>How it works?</p>
+  <mat-icon aria-hidden="false" aria-label="Info icon">info</mat-icon>
+</div>
+<div class="board-title-container">
+  <p>Your first board</p>
+</div>
 <div class="skill-cards-container" fxLayoutGap="30px" fxLayoutAlign="start start">
   <app-skill-card *ngFor="let card of cardArray" [title]="card.label"></app-skill-card>
-<!--  <app-skill-card [title]="'+'" (click)="addCard()" style="cursor: pointer"></app-skill-card>-->
-  <button mat-raised-button (click)="addCard()">+</button>
+  <!--  <app-skill-card [title]="'+'" (click)="addCard()" style="cursor: pointer"></app-skill-card>-->
+  <div class="btn-container" fxLayoutAlign="center center">
+    <button mat-raised-button (click)="addCard()" fxLayout="column" fxLayoutAlign="center center">
+      <mat-icon aria-hidden="false" aria-label="Add icon">add</mat-icon>
+    </button>
+  </div>
 </div>

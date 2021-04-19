@@ -6,9 +6,6 @@
 mat-drawer-content {
   height: 100%;
   padding: 12px;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
 
   app-board {
     height: 100%;
@@ -16,19 +13,20 @@ mat-drawer-content {
   }
 
   button {
-    width: 20px;
-    height: 20px;
     padding: 0;
+    background-color: #A95237;
 
     mat-icon {
-      font-size: 12px;
+      font-size: 14px;
+      color: white;
     }
   }
 
 }
+
 mat-drawer {
   background-color: #F0D8D1;
   width: 220px;
   border-radius: 0 20px 20px 0;
-  box-shadow: 10px 0 10px 0 rgba(0,0,0,0.10);
+  box-shadow: 10px 0 10px 0 rgba(0, 0, 0, 0.10);
 }
