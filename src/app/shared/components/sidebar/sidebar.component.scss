@@ -3,7 +3,21 @@
   width: 100%;
   border-bottom: 1px solid rgba(0, 0, 0, 0.1);
   padding: 10px;
+
+  p {
+    font-family: Montserrat, sans-serif;
+  }
 }
+
 .active-board {
-  background-color: lightpink;
+
+}
+
+.btn-container {
+  button {
+    border-radius: 20px;
+    color: #A95237;
+    font-size: 12px;
+    font-family: Montserrat, sans-serif;
+  }
 }

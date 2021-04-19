@@ -14,4 +14,21 @@ mat-drawer-content {
     height: 100%;
     width: 100%;
   }
+
+  button {
+    width: 20px;
+    height: 20px;
+    padding: 0;
+
+    mat-icon {
+      font-size: 12px;
+    }
+  }
+
+}
+mat-drawer {
+  background-color: #F0D8D1;
+  width: 220px;
+  border-radius: 0 20px 20px 0;
+  box-shadow: 10px 0 10px 0 rgba(0,0,0,0.10);
 }

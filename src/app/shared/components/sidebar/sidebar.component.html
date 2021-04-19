@@ -1,8 +1,14 @@
 <div class="sidebar-container" fxLayout="column" fxLayoutAlign="start center">
   <!--  <p *ngFor="let board of boardArray">{{board.label}}</p>-->
+  <div class="logo-container" fxFlex="20">
+    <p>logo</p>
+  </div>
+  <div class="btn-container" fxFlex="10">
+    <button mat-raised-button (click)="addBoard()">Add new board</button>
+  </div>
   <div *ngFor="let board of boardArray" [ngClass]="{'active-board' : board === activeBoard}"
-       class="board-title-wrapper" fxLayoutAlign="center center" (click)="chooseBoard(board)" style="cursor: pointer">
+       class="board-title-wrapper" fxLayoutAlign="center center" (click)="chooseBoard(board)" style="cursor: pointer"
+       fxFlex="70">
     <p>{{board.label}}</p>
   </div>
-  <button mat-raised-button (click)="addBoard()">Add new board</button>
 </div>
