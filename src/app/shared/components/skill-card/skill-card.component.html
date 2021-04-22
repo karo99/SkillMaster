@@ -1,6 +1,6 @@
-<mat-card class="card-container" fxLayout="column">
+<mat-card class="card-container" fxLayout="column" [ngStyle]="{'background-color': color}">
   <div class="edit-container" fxFlex="20" fxLayoutAlign="flex-end center">
-    <mat-icon  fxLayoutAlign="center center" aria-hidden="false" aria-label="Edit icon">edit</mat-icon>
+    <mat-icon *ngIf="editMode" fxLayoutAlign="center center" aria-hidden="false" aria-label="Edit icon">edit</mat-icon>
   </div>
   <div class="title-container" fxFlex="60" fxLayoutAlign="center center">
     {{title}}

@@ -7,8 +7,11 @@ import {Component, Input, OnInit} from '@angular/core';
 })
 export class SkillCardComponent implements OnInit {
   @Input() title: string;
+  @Input() color: string;
+  @Input() editMode: boolean;
 
-  constructor() { }
+  constructor() {
+  }
 
   ngOnInit(): void {
   }

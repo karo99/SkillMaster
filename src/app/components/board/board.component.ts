@@ -1,7 +1,11 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {SkillCardModel} from '../../shared/models/skill-card.model';
 import {MatDialog} from '@angular/material/dialog';
 import {AddCardDialogComponent} from '../add-card-dialog/add-card-dialog.component';
+import {BoardService} from '../../shared/services/board.service';
+import {ColorLevelsModel} from '../../shared/models/color-levels.model';
+import {EditCardDialogComponent} from '../edit-card-dialog/edit-card-dialog.component';
+import {SkillBoardModel} from '../../shared/models/skill-board.model';
 
 @Component({
   selector: 'app-board',
@@ -9,31 +13,52 @@ import {AddCardDialogComponent} from '../add-card-dialog/add-card-dialog.compone
   styleUrls: ['./board.component.scss']
 })
 export class BoardComponent implements OnInit {
-  cardArray: SkillCardModel[];
+  public cardArray: SkillCardModel[];
+  public board: SkillBoardModel;
+  public editMode: boolean;
 
-  constructor(private dialog: MatDialog) {
-    this.cardArray = [
-      new SkillCardModel('first'),
-      new SkillCardModel('second'),
-      new SkillCardModel('third'), new SkillCardModel('first'),
-      new SkillCardModel('second'),
-      new SkillCardModel('third'), new SkillCardModel('first'),
-      new SkillCardModel('second'),
-      new SkillCardModel('third'), new SkillCardModel('first'),
-      new SkillCardModel('second'),
-      new SkillCardModel('third'),
-    ];
+  constructor(private dialog: MatDialog,
+              private boardService: BoardService) {
+    this.cardArray = [];
+    this.editMode = false;
   }
 
   ngOnInit(): void {
+    this.boardService.getCurrentBoard().subscribe(res => {
+      this.cardArray = res.cardArray;
+      this.board = res;
+    });
   }
 
   public addCard(): void {
-    // this.cardArray.push(new SkillCardModel('next'));
-    const compRef = this.dialog.open(AddCardDialogComponent);
-    compRef.componentInstance.sendTitle.subscribe(res => {
-      compRef.close();
+    const dialogRef = this.dialog.open(AddCardDialogComponent);
+    dialogRef.componentInstance.sendTitle.subscribe(res => {
+      dialogRef.close();
       this.cardArray.push(new SkillCardModel(res));
     });
+  }
+
+  public checkColor(level: number): string {
+    const palette = new ColorLevelsModel();
+    return palette.colorArray[level];
+  }
+
+  public incrementLevel(card: SkillCardModel): void {
+    if (!this.editMode) {
+      card.colorLevel++;
+    } else {
+      const dialogRef = this.dialog.open(EditCardDialogComponent, {
+        data: card.label
+      });
+      dialogRef.componentInstance.sendTitle.subscribe(res => {
+        dialogRef.close();
+        card.label = res;
+        // this.cardArray.push(new SkillCardModel(res));
+      });
+    }
+  }
+
+  public toggleEditMode(): void {
+    this.editMode = !this.editMode;
   }
 }

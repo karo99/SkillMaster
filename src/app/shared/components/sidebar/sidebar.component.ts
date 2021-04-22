@@ -1,8 +1,9 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {SkillBoardModel} from '../../models/skill-board.model';
 import {MatDialog} from '@angular/material/dialog';
 import {AddCardDialogComponent} from '../../../components/add-card-dialog/add-card-dialog.component';
 import {AddBoardDialogComponent} from '../../../components/add-board-dialog/add-board-dialog.component';
+import {BoardService} from '../../services/board.service';
 
 @Component({
   selector: 'app-sidebar',
@@ -13,14 +14,16 @@ export class SidebarComponent implements OnInit {
   public boardArray: SkillBoardModel[];
   public activeBoard: SkillBoardModel;
 
-  constructor(private dialog: MatDialog) {
-    this.boardArray = [
-      new SkillBoardModel('Your first board')
-    ];
-    this.activeBoard = this.boardArray[0];
+  constructor(private dialog: MatDialog,
+              private boardService: BoardService) {
+    this.boardArray = this.boardService.getBoardArray();
+
   }
 
   ngOnInit(): void {
+    this.boardService.getCurrentBoard().subscribe(res => {
+      this.activeBoard = res;
+    });
   }
 
   public addBoard(): void {
@@ -32,6 +35,6 @@ export class SidebarComponent implements OnInit {
   }
 
   public chooseBoard(chosenBoard: SkillBoardModel): void {
-    this.activeBoard = chosenBoard;
+    this.boardService.setCurrentBoard(chosenBoard);
   }
 }

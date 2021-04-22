@@ -11,6 +11,7 @@ import { FlexLayoutModule } from '@angular/flex-layout';
 import { AddCardDialogComponent } from './components/add-card-dialog/add-card-dialog.component';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import { AddBoardDialogComponent } from './components/add-board-dialog/add-board-dialog.component';
+import { EditCardDialogComponent } from './components/edit-card-dialog/edit-card-dialog.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { AddBoardDialogComponent } from './components/add-board-dialog/add-board
     BoardComponent,
     SkillCardComponent,
     AddCardDialogComponent,
-    AddBoardDialogComponent
+    AddBoardDialogComponent,
+    EditCardDialogComponent
   ],
     imports: [
         BrowserModule,
