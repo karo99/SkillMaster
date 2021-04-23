@@ -27,9 +27,9 @@ export class SidebarComponent implements OnInit {
   }
 
   public addBoard(): void {
-    const compRef = this.dialog.open(AddBoardDialogComponent);
-    compRef.componentInstance.sendTitle.subscribe(res => {
-      compRef.close();
+    const dialogRef = this.dialog.open(AddBoardDialogComponent);
+    dialogRef.componentInstance.sendTitle.subscribe(res => {
+      dialogRef.close();
       this.boardArray.push(new SkillBoardModel(res));
     });
   }

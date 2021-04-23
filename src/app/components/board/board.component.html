@@ -1,13 +1,17 @@
 <!--<button mat-raised-button (click)="addCard()">Dodaj</button>-->
 <div class="info-container" fxLayout="row">
-  <p>How it works?</p>
-  <mat-icon aria-hidden="false" aria-label="Info icon">info</mat-icon>
-  <mat-icon aria-hidden="false" aria-label="Edit icon" (click)="toggleEditMode()" style="cursor: pointer">edit</mat-icon>
+  <p style="cursor: pointer" (click)="openInfoDialog()" fxLayoutAlign="center center">
+    How it works?
+    <mat-icon aria-hidden="false" aria-label="Info icon">info</mat-icon>
+  </p>
+  <mat-icon aria-hidden="false" aria-label="Edit icon" (click)="toggleEditMode()" style="cursor: pointer">
+    edit
+  </mat-icon>
 </div>
 <div *ngIf="!editMode" class="board-title-container">
   <p>{{board.label}}</p>
 </div>
-<mat-form-field *ngIf="editMode" style="margin-left: 50px">
+<mat-form-field class="form" *ngIf="editMode" style="margin-left: 50px">
   <input matInput type="text" [(ngModel)]="board.label">
 </mat-form-field>
 <div class="skill-cards-container" fxLayoutGap="30px" fxLayoutAlign="start start">

@@ -6,6 +6,7 @@ import {BoardService} from '../../shared/services/board.service';
 import {ColorLevelsModel} from '../../shared/models/color-levels.model';
 import {EditCardDialogComponent} from '../edit-card-dialog/edit-card-dialog.component';
 import {SkillBoardModel} from '../../shared/models/skill-board.model';
+import {InfoDialogComponent} from '../info-dialog/info-dialog.component';
 
 @Component({
   selector: 'app-board',
@@ -60,5 +61,9 @@ export class BoardComponent implements OnInit {
 
   public toggleEditMode(): void {
     this.editMode = !this.editMode;
+  }
+
+   public openInfoDialog(): void {
+    const dialogRef = this.dialog.open(InfoDialogComponent);
   }
 }

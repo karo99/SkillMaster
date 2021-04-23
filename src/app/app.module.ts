@@ -12,6 +12,7 @@ import { AddCardDialogComponent } from './components/add-card-dialog/add-card-di
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import { AddBoardDialogComponent } from './components/add-board-dialog/add-board-dialog.component';
 import { EditCardDialogComponent } from './components/edit-card-dialog/edit-card-dialog.component';
+import { InfoDialogComponent } from './components/info-dialog/info-dialog.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { EditCardDialogComponent } from './components/edit-card-dialog/edit-card
     SkillCardComponent,
     AddCardDialogComponent,
     AddBoardDialogComponent,
-    EditCardDialogComponent
+    EditCardDialogComponent,
+    InfoDialogComponent
   ],
     imports: [
         BrowserModule,
