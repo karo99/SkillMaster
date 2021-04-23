@@ -1,0 +1,14 @@
+<div class="sidebar-container" fxLayout="column" fxLayoutAlign="start center">
+  <!--  <p *ngFor="let board of boardArray">{{board.label}}</p>-->
+  <div class="logo-container" fxFlex="10" fxLayout="column" fxLayoutAlign="center center">
+    <p>SkillMaster</p>
+  </div>
+  <div class="btn-container" fxFlex="8">
+    <button mat-raised-button (click)="addBoard()">Add new board</button>
+  </div>
+  <div *ngFor="let board of boardArray" [ngClass]="{'active-board' : board === activeBoard}"
+       class="board-title-wrapper" fxLayoutAlign="start center" fxLayout="column" (click)="chooseBoard(board)"
+       style="cursor: pointer">
+    <p>{{board.label}}</p>
+  </div>
+</div>

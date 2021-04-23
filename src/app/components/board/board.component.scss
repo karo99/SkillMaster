@@ -1,0 +1,54 @@
+
+.info-container {
+  padding: 20px 0 0 56px;
+
+  p {
+    font-size: 12px;
+    font-family: "Montserrat", sans-serif;
+    color: #8F92A1;
+  }
+
+  mat-icon {
+    padding-left: 5px;
+    color: darkgray;
+  }
+}
+
+.board-title-container {
+  padding-left: 50px;
+
+  p {
+    font-size: 30px;
+    font-family: "Montserrat-SemiBold", sans-serif;
+    color: rgba(0, 0, 0, 0.8);
+  }
+}
+
+.skill-cards-container {
+  height: 100%;
+  width: 100%;
+  flex-flow: wrap;
+  padding: 50px;
+}
+
+.btn-container {
+  height: 100px;
+  width: 150px;
+
+  button {
+    background-color: #A95237;
+    color: white;
+    padding: 0;
+  }
+
+  mat-icon {
+    font-size: 20px;
+  }
+}
+
+.form {
+  font-family: "Montserrat-SemiBold", sans-serif;
+  font-size: 30px;
+  width: 300px;
+}
+

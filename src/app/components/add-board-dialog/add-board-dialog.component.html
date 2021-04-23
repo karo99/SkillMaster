@@ -1,0 +1,13 @@
+<div class="dialog-container" fxLayout="column">
+  <form [formGroup]="boardForm" (ngSubmit)="saveTitle()" fxLayout="column">
+    <mat-form-field>
+      <mat-label>Board name</mat-label>
+      <input matInput type="text" formControlName="boardTitle">
+      <button mat-button *ngIf="boardForm.get('boardTitle').value" matSuffix mat-icon-button aria-label="Clear"
+              (click)="boardForm.get('boardTitle').setValue('')">
+        <mat-icon>close</mat-icon>
+      </button>
+    </mat-form-field>
+  </form>
+  <button mat-raised-button type="submit" (click)="saveTitle()">Save</button>
+</div>

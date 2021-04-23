@@ -1,0 +1,12 @@
+<mat-drawer-container class="main-container" [hasBackdrop]="false">
+  <mat-drawer #drawer [mode]="'side'" [opened]="sidenavOpened">
+    <app-sidebar></app-sidebar>
+  </mat-drawer>
+  <mat-drawer-content fxLayout="column" fxLayoutAlign="start start">
+    <button *ngIf="sidenavOpened === false" mat-raised-button (click)="drawer.toggle()" fxLayout="column"
+            fxLayoutAlign="start center">
+      <mat-icon aria-hidden="false" aria-label="Menu icon" fxLayoutAlign="center center">menu</mat-icon>
+    </button>
+    <app-board></app-board>
+  </mat-drawer-content>
+</mat-drawer-container>
