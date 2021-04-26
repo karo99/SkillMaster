@@ -1,7 +1,8 @@
 # SkillMaster
 
-Link to the app - https://skills-master.herokuapp.com/
-This project was created mainly with Angular 2+.
+Link to the app - https://skills-master.herokuapp.com/ 
+<br> This project was created mainly with Angular 2+.
+Readme in progress...
 
 ## User Interface
 
