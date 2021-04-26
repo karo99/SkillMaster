@@ -1,27 +1,26 @@
 # SkillMaster
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 10.0.5.
+This project was created mainly with Angular 2+.
 
-## Development server
+## User Interface
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
 
-## Code scaffolding
+## Main idea
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
 
-## Build
+## Functionalities
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
 
-## Running unit tests
+### Adding new skills
+![add_cards](https://user-images.githubusercontent.com/67383292/116131828-28538200-a6cd-11eb-933f-ba911e9b3618.gif)
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+### Editing names
+![edit_names](https://user-images.githubusercontent.com/67383292/116131841-2b4e7280-a6cd-11eb-9155-3795cb7de048.gif)
 
-## Running end-to-end tests
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+### Adding new skill boards
+![new_board](https://user-images.githubusercontent.com/67383292/116131847-2c7f9f80-a6cd-11eb-96c6-37853d494dce.gif)
 
-## Further help
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+### Mastering skills
+![colors](https://user-images.githubusercontent.com/67383292/116131863-2ee1f980-a6cd-11eb-870f-e5981ba3d2bf.gif)
