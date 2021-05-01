@@ -44,7 +44,7 @@ export class BoardComponent implements OnInit {
     return palette.colorArray[level];
   }
 
-  public incrementLevel(card: SkillCardModel): void {
+  public incrementLevel(card: SkillCardModel, index: number): void {
     if (!this.editMode) {
       card.colorLevel++;
     } else {
@@ -54,7 +54,10 @@ export class BoardComponent implements OnInit {
       dialogRef.componentInstance.sendTitle.subscribe(res => {
         dialogRef.close();
         card.label = res;
-        // this.cardArray.push(new SkillCardModel(res));
+      });
+      dialogRef.componentInstance.deleteCard.subscribe(res => {
+        dialogRef.close();
+        this.cardArray.splice(index, 1);
       });
     }
   }
@@ -63,7 +66,7 @@ export class BoardComponent implements OnInit {
     this.editMode = !this.editMode;
   }
 
-   public openInfoDialog(): void {
+  public openInfoDialog(): void {
     const dialogRef = this.dialog.open(InfoDialogComponent);
   }
 }
