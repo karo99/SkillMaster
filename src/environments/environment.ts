@@ -3,7 +3,17 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false
+  production: false,
+  firebase: {
+    apiKey: 'AIzaSyC2Z2mIyGaHM13bANKHBWU_RArss8ePe0Y',
+    authDomain: 'fir-skillmaster.firebaseapp.com',
+    databaseURL: 'https://fir-skillmaster-default-rtdb.firebaseio.com',
+    projectId: 'fir-skillmaster',
+    storageBucket: 'fir-skillmaster.appspot.com',
+    messagingSenderId: '519641759409',
+    appId: '1:519641759409:web:ef69cad64288f69a14ac90',
+    measurementId: 'G-9N0GZ5CVEK'
+  }
 };
 
 /*

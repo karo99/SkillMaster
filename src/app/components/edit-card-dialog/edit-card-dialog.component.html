@@ -13,7 +13,7 @@
       <button mat-raised-button color="warn" type="button" (click)="confirmMode = true">Delete</button>
     </div>
     <ng-container *ngIf="confirmMode">
-      <p style="font-family: 'Montserrat', sans-serif ">Do you really want to delete your card?</p>
+      <p style="font-family: 'Montserrat', sans-serif ">Do you really want to delete this card?</p>
       <div class="btn-container" fxLayout="row" fxLayoutGap="10px" fxLayoutAlign="center center">
         <button mat-raised-button type="button" (click)="deleteItem()" color="warn">Yes</button>
         <button mat-raised-button type="button" (click)="confirmMode = false">No</button>
